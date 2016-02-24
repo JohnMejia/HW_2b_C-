@@ -1,3 +1,11 @@
+// Attached: HW_2abcd
+//=====================================
+// Program: HW_2b
+//=====================================
+// Programmer: John Mejia
+// Class: CMPR 121
+//=====================================
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -35,6 +43,7 @@ int main()
 		cout << "Do you want to run the program again? (Y/N)"; 
 		cin >> input;
 		input = toupper(input);
+		cin.ignore();
 		
 	} while (input != 'N');
 		
@@ -42,8 +51,7 @@ int main()
 }
 void getInfo(char(&street)[30], char(&city)[20], char(&state)[3], char(&zip)[6], char(&address)[60])
 {	
-	cin.ignore();
-
+		
 	cout << "Enter your street address: ";
 	cin.getline(street, 30);
 	cout << "Enter your city: ";
